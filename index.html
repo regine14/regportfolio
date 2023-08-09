@@ -25,7 +25,75 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Welcome to LeeJin's space</h1>
-								<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
+								<p><!DOCTYPE html>
+									<html>
+									<head>
+									<style>
+									  #text-container {
+										font-size: 24px;
+										white-space: nowrap;
+										overflow: hidden;
+										border: none;
+									  }
+									</style>
+									</head>
+									<body>
+									
+									<div id="text-container"></div>
+									
+									<script>
+									const phrases = [
+									  "I am an instructor",
+									  "I am a researcher",
+									  "I am a mentor"
+									];
+									
+									const textContainer = document.getElementById("text-container");
+									
+									let currentPhraseIndex = 0;
+									let currentCharIndex = 0;
+									let isDeleting = false;
+									let typingIndicator = true;
+									
+									function animateText() {
+									  const currentPhrase = phrases[currentPhraseIndex];
+									  let currentText;
+									
+									  if (typingIndicator) {
+										currentText = currentPhrase.substring(0, currentCharIndex) + "|"; // Add typing indicator
+									  } else {
+										currentText = currentPhrase.substring(0, currentCharIndex);
+									  }
+									
+									  textContainer.textContent = currentText;
+									
+									  if (isDeleting) {
+										currentCharIndex--;
+									  } else {
+										currentCharIndex++;
+									  }
+									
+									  if (currentCharIndex > currentPhrase.length + 1) {
+										isDeleting = true;
+										typingIndicator = false;
+									  }
+									
+									  if (currentCharIndex === 0 && isDeleting) {
+										isDeleting = false;
+										typingIndicator = true;
+										currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+									  }
+									
+									  const typingSpeed = isDeleting ? 50 : 150; // Adjust typing and deleting speed here
+									  setTimeout(animateText, typingSpeed);
+									}
+									
+									animateText();
+									</script>
+									
+									</body>
+									</html>
+									A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
 								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
 							</div>
 						</div>
@@ -33,7 +101,7 @@
 							<ul>
 								<li><a href="#intro">Intro</a></li>
 								<li><a href="#work">Work</a></li>
-								<li><a href="#about">Publication</a></li>
+								<li><a href="#Publication">Publication</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
@@ -90,9 +158,7 @@
 									</ul>
 								</form>
 								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
 									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</article>
