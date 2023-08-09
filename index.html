@@ -45,7 +45,8 @@
 									const phrases = [
 									  "I am an instructor",
 									  "I am a researcher",
-									  "I am a mentor"
+									  "I am a mentor",
+									  "I am a scientist"
 									];
 									
 									const textContainer = document.getElementById("text-container");
@@ -84,7 +85,7 @@
 										currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
 									  }
 									
-									  const typingSpeed = isDeleting ? 150 : 150; // Adjust typing and deleting speed here
+									  const typingSpeed = isDeleting ? 100 : 100; // Adjust typing and deleting speed here
 									  setTimeout(animateText, typingSpeed);
 									}
 									
@@ -114,15 +115,20 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<span class="image.main"><img src="images/pic01.jpg" alt="" style="display: block; margin: 0 auto;" /></span><p></p>
 								<div style="text-align: justify;"><p>I am a highly motivated scientist with a passion for extracting valuable insights from complex datasets to drive data-informed decisions and contribute to the improvement of human health.
-									Having at least 7 years of research experience, I am trained with both dry and wet lab skills and experienced in analyzing and integrating big data e.g. patients' biological and clinical data to identify potential disease biomarkers or potential predictors for downstream validation or laboratory research. By the way, check out my <a href="#Project">awesome work</a>.</p>
+									Having at least 7 years of research experience, I am trained with both dry and wet lab skills and experienced in analyzing and integrating big data e.g. patients' biological and clinical data to identify potential disease biomarkers or potential predictors for downstream validation or laboratory research. 
+									My love for biology has taken me around the world - From home in Malaysia, to UK and now in Singapore (Permanent Resident in SG).
+									<p></p>
+									By the way, check out my <a href="#Project">awesome work</a>.</p>
 								</div>
+								<span class="image.main"><img src="images/pic01_1.jpg" alt="" style="display: block; margin: 0 auto;" /></span>
 								<div style="font-size: 12px;">
 									<ul>About this website:
 										<li>It is a fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</li>
-										<li>Hosted on github page</li>
-										<li>The animated typing effect on the front page is created with the help of ChatGPT August 3 Version :D </li>
+										<li>I modified the CSS and HTML codes in VSC and hosted this using GitHub Pages.</li>
+										<li>The animated typing effect on the front page is created with the help of ChatGPT August 3 Version! </li>
+										<li>All pictures used on this website were taken/created by me - I love photography and art! :D </li>
 									</ul> 
 								</div>
 							</article>
@@ -130,10 +136,10 @@
 						<!-- Project -->
 							<article id="Project">
 								<h2 class="major">Project</h2>
-								<p><span class="image main"><img src="images/pic02b.png" alt="" />This is a short visual summary of my PhD thesis </span></p>
-								<p>Watch my YouTube video that summarizes my PhD thesis within 5 minutes
-									<iframe width="560" height="315" src="https://www.youtube.com/embed/rhnFeUfrvGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-								</p>
+								<p>This is a short visual summary of my PhD thesis <span class="image main"><img src="images/pic02b.png" alt="" /></span></p>
+								<p>Watch my YouTube video that summarizes my PhD work within 5 minutes</p>
+									<iframe width="640" height="360" src="https://www.youtube.com/embed/rhnFeUfrvGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								
 							</article>
 
 						<!-- Publication -->
@@ -141,14 +147,14 @@
 								<h2 class="major">Publication</h2>
 								<p>Here is the list of my publication:</p>
 							<ul>
-								<li>Lee Jin Lim et al . Roles and Regulation of Long non-coding RNAs in Hepatocellular Carcinoma. Cancer Research DOI:10.1158/0008-5472.CAN-19-0255 (2019) - Cited by >100 papers </li>
-								<li>Lee Jin Lim et al . Network of clinically-relevant lncRNAs-mRNAs associated with prognosis of Hepatocellular Carcinoma patients. Scientific Reports (2020) 10:11124 </li>
-								<li>Lee Jin Lim et al . Highly deregulated lncRNA LOC is associated with overall worse prognosis in Hepatocellular Carcinoma patients. J Cancer. 2021 Mar 30;12(11):3098-3113. doi: 10.7150/jca.56340.</li>
-								<li>Lee Jin Lim et al . Sentiments Regarding COVID-19 Vaccination among Graduate Students in Singapore. Vaccines (Basel).2021 Oct 6;9(10):1141. doi: 10.3390/vaccines9101141 - Featured paper in a special issue</li>
-								<li>Lee Jin Lim and Ashley J W Lim et al . Machine learning using genetic and clinical data identifies a signature that robustly predicts methotrexate response in rheumatoid arthritis. Rheumatology (Oxford). 2022 Oct 6;61(10):4175-4186. doi:10.1093/rheumatology/keac032. (Co-first author)</li>
-								<li>Ashley J W Lim and Lee Jin Lim et al . Functional coding haplotypes and machine-learning feature elimination identifies predictors of Methotrexate Response in Rheumatoid Arthritis patients. EBioMedicine. 2022 Jan;75:103800. doi:10.1016/j.ebiom.2021.103800. (Co-first author) </li>
-								<li>Ashley J W Lim, Tyniana CT and Lee Jin Lim et al. Robust SNP-based prediction of rheumatoid arthritis through machine-learning-optimized polygenic risk score. J Transl Med. 2023 Feb 7;21(1):92. doi: 10.1186/s12967-023-03939-5. PMID:36750873; PMCID: PMC9903430.</li>
-								<li>Yap, Josephine Yu Yan.... Lee Jin Lim ... et al. Machine Learning Identifies a Signature of Nine Exosomal RNAs That Predicts Hepatocellular Carcinoma. Cancers 2023, 15, 3749. https://doi.org/10.3390/cancers15143749 (Co-coresponding author) </li>
+								<li><a href="https://aacrjournals.org/cancerres/article/79/20/5131/638352/Roles-and-Regulation-of-Long-Noncoding-RNAs-in" target="_blank"><b>Lee Jin Lim</b> et al . Roles and Regulation of Long non-coding RNAs in Hepatocellular Carcinoma. Cancer Research DOI:10.1158/0008-5472.CAN-19-0255 (2019)</a> <br>- Cited by >100 papers </li>
+								<li><a href="https://www.nature.com/articles/s41598-020-67742-8" target="_blank"><b>Lee Jin Lim</b> et al . Network of clinically-relevant lncRNAs-mRNAs associated with prognosis of Hepatocellular Carcinoma patients. Scientific Reports (2020) 10:11124 </a></li>
+								<li><a href="https://www.jcancer.org/v12p3098.htm" target="_blank"><b>Lee Jin Lim</b> et al . Highly deregulated lncRNA LOC is associated with overall worse prognosis in Hepatocellular Carcinoma patients. J Cancer. 2021 Mar 30;12(11):3098-3113. doi: 10.7150/jca.56340.</a></li>
+								<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8538718/" target="_blank"><b>Lee Jin Lim</b> et al . Sentiments Regarding COVID-19 Vaccination among Graduate Students in Singapore. Vaccines (Basel).2021 Oct 6;9(10):1141. doi: 10.3390/vaccines9101141 </a><br>- Featured paper in a special issue</li>
+								<li><a href="https://academic.oup.com/rheumatology/article-lookup/doi/10.1093/rheumatology/keac032" target="_blank"><b>Lee Jin Lim</b> and Ashley J W Lim et al . Machine learning using genetic and clinical data identifies a signature that robustly predicts methotrexate response in rheumatoid arthritis. Rheumatology (Oxford). 2022 Oct 6;61(10):4175-4186. doi:10.1093/rheumatology/keac032.</a><br> - Co-first author</li>
+								<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8808170/" target="_blank">Ashley J W Lim and <b>Lee Jin Lim</b> et al . Functional coding haplotypes and machine-learning feature elimination identifies predictors of Methotrexate Response in Rheumatoid Arthritis patients. EBioMedicine. 2022 Jan;75:103800. doi:10.1016/j.ebiom.2021.103800.</a> <br>- Co-first author</li>
+								<li><a href="https://translational-medicine.biomedcentral.com/articles/10.1186/s12967-023-03939-5" target="_blank">Ashley J W Lim, Tyniana CT and <b>Lee Jin Lim</b> et al. Robust SNP-based prediction of rheumatoid arthritis through machine-learning-optimized polygenic risk score. J Transl Med. 2023 Feb 7;21(1):92. doi: 10.1186/s12967-023-03939-5. PMID:36750873; PMCID: PMC9903430.</a></li>
+								<li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10377993/" target="_blank">Yap, Josephine Yu Yan.... <b>Lee Jin Lim</b> ... et al. Machine Learning Identifies a Signature of Nine Exosomal RNAs That Predicts Hepatocellular Carcinoma. Cancers 2023, 15, 3749. https://doi.org/10.3390/cancers15143749</a> <br>- Co-coresponding author</li>
 							</ul>
 							</article>
 
@@ -420,7 +426,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Lee Jin </p>
+						<p class="copyright">&copy; Lee Jin</p>
 					</footer>
 
 			</div>
