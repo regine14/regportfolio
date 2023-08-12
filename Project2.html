@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            /* Add a black box style */
+            .black-box {
+            background-color: #1b1f22;
+            padding: 20px; /* Add padding for spacing */
+            color: white; /* Set text color to white */
+            margin-top: 40px;
+        }
+        </style>
+
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+                    <article>
+                        <div class="black-box">
+                            <h1>Coming soon</h1>
+                            <p></p>
+
+                                <nav class="bookmark-tabs">
+                                    <ul>
+                                        <li><a href="index.html#intro">Intro</a></li>
+                                        <li><a href="index.html#Project">Project</a></li>
+                                        <li><a href="index.html#Publication">Publication</a></li>
+                                        <li><a href="index.html#ScientificIllustration">Sci-Illust</a></li>
+                                        <li><a href="index.html#contact">Contact</a></li>
+                                    </ul>
+                                </nav>
+                        </div>
+                    </article>
+            </div>
+
+		<!-- Footer -->
+         <footer id="footer">
+        <p class="copyright">&copy; Lee Jin</p>
+        </footer>
+
+        <!-- BG -->
+        <div id="bg"></div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            function loadSection(sectionUrl) {
+                window.location.hash = 'Project/' + sectionUrl; // Update the URL hash
+                loadContent(sectionUrl); // Load the content dynamically
+            }
+            
+            function loadContent(sectionUrl) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', sectionUrl, true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        document.getElementById('sectionContent').innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            }
+        </script>
+
+    </body>
+</html>

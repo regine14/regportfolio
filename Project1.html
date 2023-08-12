@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>PhD project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            /* Add a black box style */
+            .black-box {
+            background-color: #1b1f22;
+            padding: 20px; /* Add padding for spacing */
+            color: white; /* Set text color to white */
+            margin-top: 40px;
+        }
+
+            .navigation {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 10px;
+		}
+
+		    .navigation a {
+			padding: 5px 10px;
+			background-color: #333;
+			color: white;
+			text-decoration: none;
+			border-radius: 3px;
+		}
+		
+        </style>
+
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+                    <article>
+                        <div class="black-box">
+                            <h1>PhD project</h1>
+                            <p>This is a short visual summary of my PhD thesis <span class="image main"><img src="images/pic02b.png" alt="" /></span></p>
+                            <p>Watch my YouTube video that summarizes my PhD work within 5 minutes</p>
+                                <iframe width="640" height="360" src="https://www.youtube.com/embed/rhnFeUfrvGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            
+                                <nav class="bookmark-tabs">
+                                    <ul>
+                                        <li><a href="index.html#intro">Intro</a></li>
+                                        <li><a href="index.html#Project">Project</a></li>
+                                        <li><a href="index.html#Publication">Publication</a></li>
+                                        <li><a href="index.html#ScientificIllustration">Sci-Illust</a></li>
+                                        <li><a href="index.html#contact">Contact</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="navigation">
+                                    <a href="index.html#Project">Previous project</a>
+                                    <a href="Project2.html" >Next project</a>
+                                </div>
+                        </div>
+                    </article>
+            </div>
+
+		<!-- Footer -->
+         <footer id="footer">
+        <p class="copyright">&copy; Lee Jin</p>
+        </footer>
+
+        <!-- BG -->
+        <div id="bg"></div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            function loadSection(sectionUrl) {
+                window.location.hash = 'Project/' + sectionUrl; // Update the URL hash
+                loadContent(sectionUrl); // Load the content dynamically
+            }
+            
+            function loadContent(sectionUrl) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', sectionUrl, true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        document.getElementById('sectionContent').innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            }
+        </script>
+
+    </body>
+</html>

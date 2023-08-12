@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -145,18 +146,38 @@
 						<!-- Project -->
 							<article id="Project">
 								<h2 class="major">Project</h2>
-								<p>This is a short visual summary of my PhD thesis <span class="image main"><img src="images/pic02b.png" alt="" /></span></p>
-								<p>Watch my YouTube video that summarizes my PhD work within 5 minutes</p>
-									<iframe width="640" height="360" src="https://www.youtube.com/embed/rhnFeUfrvGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-									<nav class="bookmark-tabs">
-										<ul>
-											<li><a href="#intro">Intro</a></li>
-											<li><a href="#Project">Project</a></li>
-											<li><a href="#Publication">Publication</a></li>
-											<li><a href="#ScientificIllustration">Sci-Illust</a></li>
-											<li><a href="#contact">Contact</a></li>
-											<!--<li><a href="#elements">Elements</a></li>-->
-										</ul>	
+
+								 <!-- Bookshelf for project summaries -->
+								<div class="bookshelf">
+									<div class="book">
+										<a href="Project1.html" target="projectFrame">
+											<img src="images/pic02b.png">
+											<br><br><br>
+											<h3>PhD project</h3>
+											<p>A visual summary and a video that summarize my PhD project.</p>
+										</a>
+									</div>
+									
+									<div class="book">
+										<a href="Project2.html">
+											<img src="images/bg.jpg">
+											<h3>R workshop</h3>
+											<p>A brief summary of Project 2.</p>
+										</a>
+									</div>
+									<!-- Add more book summaries for other projects -->
+								</div>	
+								
+								<nav class="bookmark-tabs">
+									<ul>
+										<li><a href="#intro">Intro</a></li>
+										<li><a href="#Project">Project</a></li>
+										<li><a href="#Publication">Publication</a></li>
+										<li><a href="#ScientificIllustration">Sci-Illust</a></li>
+										<li><a href="#contact">Contact</a></li>
+										<!--<li><a href="#elements">Elements</a></li>-->
+									</ul>	
+									
 							</article>
 
 						<!-- Publication -->
@@ -484,6 +505,26 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function loadSection(sectionUrl) {
+					window.location.hash = 'Project/' + sectionUrl; // Update the URL hash
+					loadContent(sectionUrl); // Load the content dynamically
+				}
+		
+				function loadContent(sectionUrl) {
+					var xhr = new XMLHttpRequest();
+					xhr.open('GET', sectionUrl, true);
+					xhr.onreadystatechange = function() {
+						if (xhr.readyState === 4 && xhr.status === 200) {
+							var parser = new DOMParser();
+							var sectionDocument = parser.parseFromString(xhr.responseText, 'text/html');
+							var sectionContent = sectionDocument.querySelector('#section1Content'); // Use the unique ID from section1.html
+							document.getElementById('sectionContent').innerHTML = sectionContent.innerHTML;
+						}
+					};
+					xhr.send();
+				}
+			</script>
 
 	</body>
 </html>
