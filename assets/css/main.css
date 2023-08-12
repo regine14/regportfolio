@@ -1681,6 +1681,50 @@ input, select, textarea {
 			color: rgba(255, 255, 255, 1); /* Full opacity when active */
 		}
 		
+		/* Style for the bookshelf */
+		.bookshelf {
+			display: flex;
+			justify-content: center;
+			background-color: transparent;
+			margin-top: 20px; /* Adjust the spacing as needed */
+		}
+
+		/* Style for each book */
+		.book {
+			display: flex; /* Use flexbox to center content vertically and horizontally */
+			flex-direction: column; /* Stack content vertically */
+			align-items: center; /* Center content horizontally */
+			text-align: center;
+			background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+			border: 1px solid #ccc;
+			padding: 15px;
+			margin: 15px; /* Adjust the spacing between books */
+			border-radius: 5px;
+			width: 40%; /* Each book occupies 50% of the available width */
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+			transition: background-color 0.3s ease-in-out;
+		}
+
+		.book:hover {
+			background-color: rgba(255, 255, 255, 0.2); /* Darker background on hover */
+		}
+
+		.book img {
+			max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+			margin: 0 auto; /* Center the image horizontally */
+			padding: 20px;
+		}
+
+		.book h3 {
+			margin: 10px 0 5px 0; /* Add some margin for spacing */
+			font-size: 1rem;
+		}
+
+		.book p {
+			font-size: 0.8rem;
+		}
+
+
 /* Footer */
 
 	#footer {
