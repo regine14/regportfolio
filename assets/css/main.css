@@ -1623,6 +1623,64 @@ input, select, textarea {
 
 		}
 
+		/* Additional styles for navigation tabs on each page */
+		#main {
+			position: relative;
+		}
+	
+		nav {
+			position: absolute;
+			top: 10px;
+			left: 50%; /* Position the nav in the middle */
+			transform: translateX(-50%);
+		}
+	
+		.bookmark-tabs ul {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			margin-bottom: 0;
+			list-style: none;
+			padding-left: 0;
+			border: solid 1px transparent; /* Transparent border */
+			border-radius: 4px;
+			background-color: transparent; /* Transparent background */
+		}
+	
+		.bookmark-tabs li {
+			padding-left: 0;
+			border-left: solid 1px transparent; /* Transparent border */
+		}
+	
+		.bookmark-tabs a {
+			display: block;
+			min-width: 10rem;
+			height: 2.75rem;
+			line-height: 2.75rem;
+			padding: 0 1.25rem 0 1.45rem;
+			text-transform: uppercase;
+			letter-spacing: 0.2rem;
+			font-size: 0.8rem;
+			border-bottom: 0;
+			color: rgba(255, 255, 255, 0.8); /* Semi-transparent color */
+			transition: background-color 0.2s, color 0.2s;
+		}
+	
+		.bookmark-tabs ul li:first-child {
+			border-left: 0;
+		}
+	
+		.bookmark-tabs ul li a:hover {
+			background-color: rgba(255, 255, 255, 0.075);
+			color: rgba(255, 255, 255, 1); /* Full opacity on hover */
+		}
+	
+		.bookmark-tabs ul li a:active {
+			background-color: rgba(255, 255, 255, 0.175);
+			color: rgba(255, 255, 255, 1); /* Full opacity when active */
+		}
+		
 /* Footer */
 
 	#footer {
