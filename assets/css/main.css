@@ -1622,7 +1622,7 @@ input, select, textarea {
 			}
 
 		}
-
+		
 		/* Additional styles for navigation tabs on each page */
 		#main {
 			position: relative;
@@ -1637,20 +1637,19 @@ input, select, textarea {
 
 		.bookmark-tabs ul {
 			display: flex;
-			flex-wrap: wrap; /* Allow tabs to wrap to a new line */
 			margin-bottom: 0;
 			list-style: none;
 			padding-left: 0;
 			border: solid 1px transparent; /* Transparent border */
 			border-radius: 4px;
 			background-color: transparent; /* Transparent background */
+			flex-wrap: nowrap; /* Prevent wrapping by default */
 		}
 
 		.bookmark-tabs li {
 			padding-left: 0;
 			border-left: solid 1px transparent; /* Transparent border */
-			flex: 0 0 50%; /* Divide tabs into two columns */
-			box-sizing: border-box;
+			flex: 0 0 auto; /* Reset flex value */
 		}
 
 		.bookmark-tabs a {
@@ -1682,7 +1681,11 @@ input, select, textarea {
 		}
 
 		/* Media queries for smaller screens */
-		@media screen and (max-width: 768px) {
+		@media screen and (max-width: 768px), screen and (max-width: 460px) {
+			.bookmark-tabs ul {
+				flex-wrap: wrap; /* Allow wrapping on smaller screens */
+			}
+			
 			.bookmark-tabs li {
 				flex: 0 0 100%; /* Tabs take full width on small screens */
 			}
@@ -1692,15 +1695,6 @@ input, select, textarea {
 			}
 		}
 
-		@media screen and (max-width: 460px) {
-			.bookmark-tabs li {
-				flex: 0 0 100%; /* Tabs take full width on small screens */
-			}
-			
-			.bookmark-tabs a {
-				font-size: 0.7rem;
-			}
-		}
 		
 		/* Style for the bookshelf */
 		.bookshelf {
