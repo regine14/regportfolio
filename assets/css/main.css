@@ -1628,7 +1628,7 @@ input, select, textarea {
 			position: relative;
 		}
 	
-		nav {
+		.nav_top {
 			position: absolute;
 			top: 10px;
 			left: 50%; /* Position the nav in the middle */
