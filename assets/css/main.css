@@ -1430,9 +1430,11 @@ input, select, textarea {
 			}
 	
 			@media screen and (max-width: 736px) {
-	
 				#header > * {
-					margin-top: 2rem;
+					margin-top: 2rem; /* Adjust this margin as needed */
+					display: flex;
+					justify-content: center; /* Center horizontally */
+					align-items: center; /* Center vertically */
 				}
 	
 					#header > *:before {
@@ -1477,6 +1479,7 @@ input, select, textarea {
 						flex-direction: column;
 						min-width: 10rem;
 						max-width: 100%;
+						margin: 0 auto; /* Center horizontally */
 					}
 	
 						#header nav ul li {
