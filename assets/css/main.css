@@ -1684,8 +1684,7 @@ input, select, textarea {
 		/* Media query for smaller screens */
 		@media screen and (max-width: 768px) {
 			.bookmark-tabs li {
-				flex: 0 0 100%; /* Tabs take full width on small screens */
-				max-width: 50%; /* Limit to two columns */
+				flex: 0 0 50%; /* Tabs take half width on small screens */
 			}
 			
 			.bookmark-tabs ul {
