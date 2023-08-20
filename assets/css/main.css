@@ -1636,6 +1636,9 @@ input, select, textarea {
 		}
 
 		.bookmark-tabs ul {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
 			display: flex;
 			margin-bottom: 0;
 			list-style: none;
@@ -1643,13 +1646,11 @@ input, select, textarea {
 			border: solid 1px transparent; /* Transparent border */
 			border-radius: 4px;
 			background-color: transparent; /* Transparent background */
-			flex-wrap: nowrap; /* Prevent wrapping by default */
 		}
 
 		.bookmark-tabs li {
 			padding-left: 0;
 			border-left: solid 1px transparent; /* Transparent border */
-			flex: 0 0 auto; /* Reset flex value */
 		}
 
 		.bookmark-tabs a {
@@ -1680,42 +1681,6 @@ input, select, textarea {
 			color: rgba(255, 255, 255, 1); /* Full opacity when active */
 		}
 
-		/* Media query for smaller screens */
-		@media screen and (max-width: 768px) {
-			.bookmark-tabs li {
-				flex: 0 0 50%; /* Tabs take half width on small screens */
-			}
-			
-			.bookmark-tabs ul {
-				position: absolute;
-				top: 10px;
-				left: 50%;
-				transform: translateX(-50%);
-				width: 100%; /* Take full width of the screen */
-			}
-			
-			.bookmark-tabs a {
-				font-size: 0.7rem;
-			}
-		}
-
-		@media screen and (max-width: 460px) {
-			.bookmark-tabs li {
-				flex: 0 0 50%; /* Tabs take full width on even smaller screens */
-			}
-			
-			.bookmark-tabs ul {
-				position: absolute;
-				top: 10px;
-				left: 50%;
-				transform: translateX(-50%);
-				width: 100%; /* Take full width of the screen */
-			}
-			
-			.bookmark-tabs a {
-				font-size: 0.6rem;
-			}
-		}
 		
 		/* Style for the bookshelf */
 		.bookshelf {
