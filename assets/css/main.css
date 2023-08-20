@@ -304,9 +304,8 @@ input, select, textarea {
 
 	.video-container {
 		position: relative;
-		padding-bottom: 56.25%; /* 16:9 aspect ratio (h/w * 100) */
-		height: 0;
 		overflow: hidden;
+		max-width: 100%;
 	}
 	
 	.video-container iframe {
@@ -320,14 +319,14 @@ input, select, textarea {
 	@media (max-width: 768px) {
 		/* Styles for screens up to 768px wide (typical tablet size) */
 		.video-container {
-		padding-bottom: 75%; /* Adjust aspect ratio for tablets */
+		padding-bottom: 56.25%; /* 16:9 aspect ratio */
 		}
 	}
 
 	@media (max-width: 480px) {
 		/* Styles for screens up to 480px wide (typical mobile phone size) */
 		.video-container {
-		padding-bottom: 100%; /* Adjust aspect ratio for mobile phones */
+		padding-bottom: 75%; /* Adjust aspect ratio for mobile phones */
 		}
 	}
 
