@@ -1643,14 +1643,13 @@ input, select, textarea {
 			border: solid 1px transparent; /* Transparent border */
 			border-radius: 4px;
 			background-color: transparent; /* Transparent background */
-			flex-wrap: wrap; /* Allow wrapping */
+			flex-wrap: nowrap; /* Prevent wrapping by default */
 		}
 
 		.bookmark-tabs li {
 			padding-left: 0;
 			border-left: solid 1px transparent; /* Transparent border */
-			flex: 0 0 50%; /* Divide into two columns */
-			box-sizing: border-box;
+			flex: 0 0 auto; /* Reset flex value */
 		}
 
 		.bookmark-tabs a {
