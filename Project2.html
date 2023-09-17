@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Project</title>
+		<title>PhD project</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -9,11 +9,35 @@
         <style>
             /* Add a black box style */
             .black-box {
-            background-color: #1b1f22;
+            background-color: rgba(255, 255, 255, 0.055);
             padding: 20px; /* Add padding for spacing */
             color: white; /* Set text color to white */
-            margin-top: 40px;
+            margin: 0 auto;
+            width: 100vw;
+            height: 100vh
         }
+
+            .navigation {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 10px;
+		}
+
+		    .navigation a {
+			padding: 5px 10px;
+			background-color: #131313;
+			color: white;
+			text-decoration: none;
+			border-radius: 3px;
+		}
+
+            .embed-container {
+            padding-top: 50px; /* Create space at the top */
+            width: 100%;
+            height: 100%;
+            background-color: white; /* Background color for the space at the top */
+        }
+		
         </style>
 
 	</head>
@@ -25,9 +49,16 @@
 
                     <article>
                         <div class="black-box">
-                            <h1>Coming soon</h1>
-                            <p></p>
+                            <h1>Discovering Research Trends: Keyword-Based Publication Search and Wordcloud Analysis</h1>
+                            <p>Based on past experiences, whenever I start a new research topic or delve into a new subject, the researcher in me begins searching for the latest publications to identify emerging trends. During this process, the number of publications I read tends to increase, making it essential to have an effective method for properly documenting the list of publications.
 
+                                In my opinion, using an Excel spreadsheet that includes basic publication information such as publication dates, author names, publication links, titles, and abstracts is an excellent starting point. Additionally, the ability to generate a word cloud summarizing the latest trends based on the titles of these publications is a valuable feature.
+                                
+                                Therefore, I developed my first Shiny app containing these features using Python. I hope you enjoy using the app! </p>
+                            <p>Please note that the original webpage is being embeded, so you might need to scroll down to view the full results. If you prefer to visit the original webpage, click <a href="https://regine14app.shinyapps.io/publicationlist/" target="_blank">here</a>. </p>
+                            <div class="embed-container">    
+                                <iframe src="https://regine14app.shinyapps.io/publicationlist/" width=100% height=100% frameborder="0"></iframe>
+                            </div>
                                 <nav class="nav_top bookmark-tabs">
                                     <ul>
                                         <li><a href="index.html#intro">Intro</a></li>
@@ -37,6 +68,10 @@
                                         <li><a href="index.html#contact">Contact</a></li>
                                     </ul>
                                 </nav>
+                                <div class="navigation">
+                                    <a href="index.html#Project">Previous project</a>
+                                    <a href="Project2.html" >Next project</a>
+                                </div>
                         </div>
                     </article>
             </div>
