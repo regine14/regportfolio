@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Project 3</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            /* Add a black box style */
+            .black-box {
+            background-color: rgba(255, 255, 255, 0.055);
+            padding: 20px; /* Add padding for spacing */
+            color: white; /* Set text color to white */
+            margin: 0 auto;
+            width: 100vw;
+            height: 100vh
+        }
+
+            .navigation {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 10px;
+		}
+
+		    .navigation a {
+			padding: 5px 10px;
+			background-color: #131313;
+			color: white;
+			text-decoration: none;
+			border-radius: 3px;
+		}
+
+            .embed-container {
+            padding-top: 50px; /* Create space at the top */
+            width: 100%;
+            height: 100%;
+            background-color: white; /* Background color for the space at the top */
+        }
+		
+        </style>
+
+	</head>
+
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+                    <article>
+                        <div class="black-box">
+                            <h1>Biomarker Identification for Oncogene Dependency: Guiding treatment response in Precision Medicine </h1>
+                            <p>Biomarkers offer insights into treatment outcomes, guiding personalized interventions for improved patient care. In this project, the goal is to identify cancer indications likely to predict responses to therapy targeting important oncogene, using the ERBB3/Her3 gene as an example. </p>
+                            The datasets provided (From <a href="https://depmap.org/" target="_blank">DepMap portal</a>):<li>CRISPRGeneEffect dataset: Gene effect estimates for all models. A lower score means that a gene is more likely to be dependent in a cell line.</li>
+                                <li>OmicsCNGene dataset: Gene-level copy number data that is log2 transformed with a pseudo-count of 1; log2(CN ratio + 1).</li>                                
+                                <li>OmicsExpressionProteinCodingGenesTPMLogp1 dataset: Gene expression TPM values of the protein coding genes for DepMap cell lines.</li>                                
+                                <li>Model dataset: Metadata describing all cancer models/cell lines which are referenced by a dataset contained within the DepMap portal.</li> 
+                            <br>
+                            <p>I started with getting an overview of the datasets by combining CRISPRGeneEffect and Model data. During this process, I was able to identify duplicated data points and remove the identifical data points which are redundant. </p>
+                            <img src="images/project3_overview.png" alt="" style="display: block; margin: 0 auto; max-width: 80%;" />
+                            <br>
+                            <br>
+                            <p>The next step involves classifying the 1095 cell lines with known HER3 gene effects into two groups for classification: one highly dependent on HER3 and the other not. The default threshold for the common essential gene effect is <= -1, with the gene effect not deemed essential being equal to 0. However, based on the distribution graph below, only 25% of cell lines do not depend on HER3, while 75% of cell lines depend on HER3 using the default threshold. The result is an imbalanced dataset for machine learning. To resolve this issue, I reclassify the cell lines based on 25th and 75th percentile of HER3 gene effect.</p>
+                            <img src="images/project3_classify.png" alt="" style="display: block; margin: 0 auto; max-width: 80%;" />
+                            <br>
+                            <br>
+                            <p>After classifying the cell lines into groups (HD: High dependency; LD: Low/No dependency), the next step is to identify potential biomarkers. Below is a summary of my strategy to identify potential biomarkers. In this project, I used statistical method to identify potential biomarkers but evaluate their predictive performance using six different machine learning models on both training and unseen test set.</p>
+                            <img src="images/project3_strategy.png" alt="" style="display: block; margin: 0 auto; max-width: 80%;" />
+                            <br>
+                            <br>
+                            <p>I used the same strategy on Copy number data (Dataset name:OmicsCNGene) and Protein coding gene expression (Dataset name:OmicsExpressionProteinCodingGenesTPMLogp1) data. The results are shown below: </p>
+                            <img src="images/project3_resultsummary.png" alt="" style="display: block; margin: 0 auto; max-width: 80%;" />
+                            <br>
+                            <br>
+                            <p>Since the number of potential predictors from both copy number data and gene expression data are comparable, I investigated the predictive performance and compare the results (See below). In general, the predictive performance of 256 gene expression is comparable with copy number of 257 genes in training set but the performance is much better in unseen test set.  </p>
+                            <img src="images/project3_resultsAUC.png" alt="" style="display: block; margin: 0 auto; max-width: 80%;" />
+                            <br>
+                            <br>
+                            <p>To gain insights into the potential biomarkers (256 genes), pathway analysis was conducted using <a href="http://cpdb.molgen.mpg.de/" target="_blank">CPDB molgen website</a>. The result showed that the genes potentially predicting HER3 dependency are involved in signaling pathways, with some of them related to EGFR signaling pathways involving HER3.</p>
+                            <img src="images/project3_pathways.png" alt="" style="display: block; margin: 0 auto; max-width: 80%;" />
+                            <br>
+                            <br>
+                            <p>Although the results look promising, there are some methods that could further improve the analysis:</p>
+                            <img src="images/project3_futurework.png" alt="" style="display: block; margin: 0 auto; max-width: 80%;" />
+                            <br>
+                            <br>
+                            <p>For this project, I have also generated an R notebook embedded below. If you have any suggestion to improve the analysis or interested to collaborate, please feel free to contact me :D </p>
+                            <br>
+                            <div class="embed-container">    
+                                <iframe src="231031_FinalRnotebook.nb.html" width=100% height=100% frameborder="0"></iframe>
+                            </div>
+                                <nav class="nav_top bookmark-tabs">
+                                    <ul>
+                                        <li><a href="index.html#intro">Intro</a></li>
+                                        <li><a href="index.html#Project">Project</a></li>
+                                        <li><a href="index.html#Publication">Publication</a></li>
+                                        <li><a href="index.html#ScientificIllustration">Sci-Illust</a></li>
+                                        <li><a href="index.html#contact">Contact</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="navigation">
+                                    <a href="Project2.html">Previous project</a>
+                                    <a href="index.html#Project" >Back to project page</a>
+                                </div>
+                        </div>
+                    </article>
+            </div>
+
+		<!-- Footer -->
+         <footer id="footer">
+        <p class="copyright">&copy; Lee Jin</p>
+        </footer>
+
+        <!-- BG -->
+        <div id="bg"></div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script>
+            function loadSection(sectionUrl) {
+                window.location.hash = 'Project/' + sectionUrl; // Update the URL hash
+                loadContent(sectionUrl); // Load the content dynamically
+            }
+            
+            function loadContent(sectionUrl) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', sectionUrl, true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        document.getElementById('sectionContent').innerHTML = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            }
+        </script>
+
+    </body>
+</html>
