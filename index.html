@@ -116,86 +116,124 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">About me</h2>
-								<div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap;">
-									<span style="flex: 1; min-width: 200px;">
-										<img src="images/pic01.jpg" alt="" style="width: 100%; display: block;" />
-									</span>
-									<div style="flex: 2; min-width: 250px; text-align: justify;">
-								    	<p>Having at least 8 years of research experience, I am trained with molecular biology skills and experienced in integrating wet lab techniques with computational approaches to identify novel therapeutic targets and biomarkers. My passion for science has led me to travel across the globe - From home in Malaysia, to UK and now a PR in Singapore.</p>
+								<div style="display: flex; align-items: center; flex-wrap: wrap;">
+									<div style="flex: 1; min-width: 200px;">
+										<img src="images/pic01.jpg" alt="" style="width: 80%; display: block;" />
 									</div>
-								</div>		
-								<div style="display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px;">
-									<div style="flex: 2; min-width: 250px; text-align: justify;">
+									<div style="flex: 2; min-width: 250px; text-align: justify; padding-left: 0;">
+										<p>Having at least 8 years of research experience, I am trained with molecular biology skills and experienced in integrating wet lab techniques with computational approaches to identify novel therapeutic targets and biomarkers. My passion for science has led me to travel across the globe - From home in Malaysia, to UK and now a PR in Singapore.</p>
+										</div>
+								</div>
+								<div style="display: flex; align-items: center; flex-wrap: wrap; margin-top: 40px;">
+									<div style="flex: 1; min-width: 200px;">
+										<img src="images/pic01_1.jpg" alt="" style="width: 80%; display: block;" />
+									</div>
+									<div style="flex: 2; min-width: 250px; text-align: justify; padding-left: 0;">
 										<p>By the way, check out my <a href="#Project">awesome work</a>.</p>
 									</div>
-									<span style="flex: 1; min-width: 200px;">
-										<img src="images/pic01_1.jpg" alt="" style="width: 100%; display: block;" />
-									</span>
 								</div>
 								<br>
 								<br>
 								<div style="text-align: justify;">     
 									<h2 class="major">My Skills</h2>
-									<h3>RNA targeting Techniques</h3>
-									<ul>
+									<style>
+									.skill-grid {
+									display: grid;
+									grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+									gap: 20px;
+									padding: 20px;
+									}
+
+									@media (max-width: 700px) {
+									.skill-grid {
+										grid-template-columns: 1fr; /* Stack cards on smaller screens */
+									}
+									}
+
+									.skill-card {
+									background: rgba(0, 0, 0, 0.4); /* semi-transparent dark background */
+									border-radius: 12px;
+									border: 1px solid rgba(255, 255, 255, 0.2);
+									padding: 20px;
+									box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+									color: white;
+									}
+
+									.skill-card h3 {
+									margin-top: 0;
+									color: white;
+									font-size: 1.2em;
+									border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+									padding-bottom: 5px;
+									}
+
+									.skill-card ul {				
+									padding-left: 20px;
+									margin: 10px 0 0 0;
+									}
+
+									.skill-card ul li {
+									margin-bottom: 6px;
+									}
+									</style>
+
+
+									<div class="skill-grid">
+									<div class="skill-card">
+										<h3>Wet Lab Experimental Skills</h3>
+										<ul>
+										<li>Patient tissue/saliva sample processing</li>
+										<li>Mammalian cell culture</li>
+										<li>Molecular biology</li>
+										<li>siRNA/plasmid transfection</li>
+										<li>RNA extraction & QC (Bioanalyzer)</li>
+										<li>Cytoplasmic/nuclear RNA extraction</li>
+										<li>Nanopore sequencing</li>
+										<li>Reverse transcription & primer design</li>
+										<li>PCR / qPCR / Western blot / Co-immunoprecipitation</li>
+										<li>Cloning / Bacterial transformation / Mini and maxiprep</li>
+										<li><i>In-vitro</i> functional assays (Cell growth assay, Cell cycle assay, Resistance to apoptosis assay (using flow cytometry), Cell migration and invasion assay, Anchorage indepedent growth assay)</li>
+										</ul>
+									</div>
+
+									<div class="skill-card">
+										<h3>Data Analysis Skills</h3>
+										<ul>
+										<li>Bioinformatics analysis (e.g., RNA Sequencing and Microarray Data)</li>
+										<li>Clinical data analysis</li>
+										<li>Pathway analysis</li>
+										<li>Biomarker identification</li>
+										<li>Data visualization </li>
+										<li>Data insights & interpretation</li>
+										<li>Machine learning techniques</li>
+										<li>Statistical analysis</li>
+										<li>R / Python programming</li>
+										<li>Shell scripting / Bash (via WSL)</li>
+										</ul>
+									</div>
+
+									<div class="skill-card">
+										<h3>RNA Targeting Techniques</h3>
+										<ul>
 										<li>RNA Targeting Strategy Development</li>
 										<li>Binding Assays (e.g., Isothermal titration calorimetry, 2-Aminopurine Assay)</li>
 										<li>Cell-based Cytotoxicity Assay</li>
 										<li>Assay Data Interpretation and Analysis</li>
-									</ul>
-									<h3>Wet Lab Experimental Skills</h3>
-									<ul>
-										<li>Patient tissue and saliva sample processing</li>
-										<li>Mammalian cell culture</li>
-										<li>Molecular biology </li>
-										<ul>
-											<li>Transfection of siRNA/plasmid DNA</li> 
-											<li>RNA extraction from cell lines</li> 
-											<li>RNA quality check using Agilent Bioanalyzer</li>
-											<li>Cytoplasmic and nuclear RNA extraction</li> 
-											<li>Nanopore sequencing</li>
-											<li>Reverse transcription</li> 
-											<li>Primer sequence design</li> 
-											<li>PCR</li> 
-											<li>qPCR</li> 
-											<li>Western blot</li>
-											<li>Co-immunoprecipitation</li>
-											<li>Cloning</li> 
-											<li>Bacterial cultures and transformation</li>
-											<li>Mini and maxiprep etc</li>
 										</ul>
-										<li><i>In-vitro</i> functional assays</li>
+									</div>
+
+									<div class="skill-card">
+										<h3>Soft Skills</h3>
 										<ul>
-											<li>Cell growth assay</li> 
-											<li>Cell cycle assay</li> 
-											<li>Resistance to apoptosis assay (using flow cytometry)</li> 
-											<li>Cell migration and invasion assay</li> 
-											<li>Anchorage indepedent growth assay</li>
-										</ul>
-									</ul>
-									<h3>Data Analysis Skills</h3>
-									<ul>
-										<li>Bioinformatics Analysis (e.g., RNA Sequencing and Microarray Data) </li>
-										<li>Clinical data analysis </li>
-										<li>Pathway analysis</li>
-										<li>Biomarker identification</li>
-										<li>Data Visualization</li>
-										<li>Data Insights and interpretation</li>
-										<li>Machine learning Techniques</li>
-										<li>Statistical analysis</li>
-										<li>R/Python programming</li>
-									</ul>
-									<h3>Soft Skills</h3>
-									<ul>
 										<li>Communication</li>
 										<li>Presentation</li>
 										<li>Teamwork</li>
 										<li>Problem solving</li>
 										<li>Time management</li>
 										<li>Leadership</li>
-									</ul>
+										</ul>
+									</div>
 								</div>
-								
 								<br>
 								<br>
 								<br>
