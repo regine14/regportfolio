@@ -11,6 +11,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 	</head>
 
 	<body class="is-preload">
@@ -138,51 +139,60 @@
 								<br>
 								<div style="text-align: justify;">     
 									<h2 class="major">My Skills</h2>
-									<style>
-									.skill-grid {
+							<style>
+								.skill-grid {
 									display: grid;
-									grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+									grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
 									gap: 20px;
 									padding: 20px;
-									}
+								}
 
-									@media (max-width: 700px) {
+								@media (max-width: 700px) {
 									.skill-grid {
-										grid-template-columns: 1fr; /* Stack cards on smaller screens */
+									grid-template-columns: 1fr;
 									}
-									}
+								}
 
-									.skill-card {
-									background: rgba(0, 0, 0, 0.4); /* semi-transparent dark background */
+								.skill-card {
 									border-radius: 12px;
-									border: 1px solid rgba(255, 255, 255, 0.2);
 									padding: 20px;
 									box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 									color: white;
-									}
+								}
 
-									.skill-card h3 {
+								.skill-card h3 {
 									margin-top: 0;
-									color: white;
 									font-size: 1.2em;
+									display: flex;
+									align-items: center;
 									border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 									padding-bottom: 5px;
-									}
+								}
 
-									.skill-card ul {				
+								.skill-card h3 i {
+									margin-right: 10px;
+									font-size: 1.2em;
+								}
+
+								.skill-card ul {
 									padding-left: 20px;
 									margin: 10px 0 0 0;
-									}
+								}
 
-									.skill-card ul li {
+								.skill-card ul li {
 									margin-bottom: 6px;
-									}
-									</style>
+								}
 
+								/* Icon pastel colors */
+								.wetlab i     { color: #b3e5fc; } /* pastel blue */
+								.data i       { color: #c8e6c9; } /* pastel green */
+								.rna i        { color: #e1bee7; } /* pastel purple */
+								.softskills i { color: #ffe0b2; } /* pastel orange */
+								</style>
 
 									<div class="skill-grid">
-									<div class="skill-card">
-										<h3>Wet Lab Experimental Skills</h3>
+									<div class="skill-card wetlab">
+										<h3><i class="fas fa-vial"></i>Wet Lab Experimental Skills</h3>
 										<ul>
 										<li>Patient tissue/saliva sample processing</li>
 										<li>Mammalian cell culture</li>
@@ -194,18 +204,18 @@
 										<li>Reverse transcription & primer design</li>
 										<li>PCR / qPCR / Western blot / Co-immunoprecipitation</li>
 										<li>Cloning / Bacterial transformation / Mini and maxiprep</li>
-										<li><i>In-vitro</i> functional assays (Cell growth assay, Cell cycle assay, Resistance to apoptosis assay (using flow cytometry), Cell migration and invasion assay, Anchorage indepedent growth assay)</li>
+										<li><i>In-vitro</i> functional assays (Cell growth, Cycle, Apoptosis via flow cytometry, Migration, Invasion, Anchorage-independent growth)</li>
 										</ul>
 									</div>
 
-									<div class="skill-card">
-										<h3>Data Analysis Skills</h3>
+									<div class="skill-card data">
+										<h3><i class="fas fa-chart-line"></i>Data Analysis Skills</h3>
 										<ul>
-										<li>Bioinformatics analysis (e.g., RNA Sequencing and Microarray Data)</li>
+										<li>Bioinformatics (RNA-Seq & Microarray)</li>
 										<li>Clinical data analysis</li>
 										<li>Pathway analysis</li>
 										<li>Biomarker identification</li>
-										<li>Data visualization </li>
+										<li>Data visualization</li>
 										<li>Data insights & interpretation</li>
 										<li>Machine learning techniques</li>
 										<li>Statistical analysis</li>
@@ -214,18 +224,18 @@
 										</ul>
 									</div>
 
-									<div class="skill-card">
-										<h3>RNA Targeting Techniques</h3>
+									<div class="skill-card rna">
+										<h3><i class="fas fa-dna"></i>RNA Targeting Techniques</h3>
 										<ul>
 										<li>RNA Targeting Strategy Development</li>
-										<li>Binding Assays (e.g., Isothermal titration calorimetry, 2-Aminopurine Assay)</li>
+										<li>Binding Assays (ITC, 2-Aminopurine Assay)</li>
 										<li>Cell-based Cytotoxicity Assay</li>
 										<li>Assay Data Interpretation and Analysis</li>
 										</ul>
 									</div>
 
-									<div class="skill-card">
-										<h3>Soft Skills</h3>
+									<div class="skill-card softskills">
+										<h3><i class="fas fa-users"></i>Soft Skills</h3>
 										<ul>
 										<li>Communication</li>
 										<li>Presentation</li>
@@ -235,7 +245,7 @@
 										<li>Leadership</li>
 										</ul>
 									</div>
-								</div>
+									</div>
 								<br>
 								<br>
 								<br>
