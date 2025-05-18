@@ -1685,7 +1685,8 @@ input, select, textarea {
 		/* Style for the bookshelf */
 		.bookshelf {
 			display: flex;
-			justify-content: center;
+			flex-wrap: wrap; 
+			justify-content: flex-start; /* Align items to the left */
 			background-color: transparent;
 			margin-top: 20px; /* Adjust the spacing as needed */
 		}
@@ -1701,9 +1702,10 @@ input, select, textarea {
 			padding: 15px;
 			margin: 15px; /* Adjust the spacing between books */
 			border-radius: 5px;
-			width: 40%; /* Each book occupies 50% of the available width */
+			width: calc(33.33% - 30px); /* 3 books per row, accounting for margin */
 			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 			transition: background-color 0.3s ease-in-out;
+			box-sizing: border-box; /* Include padding/border in width calculation */
 		}
 
 		.book:hover {
